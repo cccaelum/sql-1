@@ -95,8 +95,7 @@
 
 
 -- Ejercicio 25: Seleccionar los usuarios que tienen exactamente la misma edad.
--- TSELECT nombre, apellido, edad FROM usuarios_lenguajes WHERE edad IN (SELECT edad FROM usuarios_lenguajes GROUP BY edad HAVING COUNT(*) > 1) ORDER BY edad ASC;
-
+-- SELECT * FROM usuarios_lenguajes WHERE edad IN (SELECT edad FROM usuarios_lenguajes GROUP BY edad HAVING COUNT(*) > 1) ORDER BY edad ASC;
 
 -- Ejercicio 26: Encontrar el usuario con el lenguaje con mayor número de carácteres y que tenga una edad menor de 30 años. 
 -- SELECT nombre, apellido, edad, lenguaje FROM usuarios_lenguajes WHERE edad < 30 AND LENGTH(lenguaje) = (SELECT MAX(LENGTH(lenguaje)) FROM usuarios_lenguajes WHERE edad < 30) LIMIT 1;
